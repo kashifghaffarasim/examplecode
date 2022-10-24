@@ -1,0 +1,29 @@
+
+
+
+<%= form_for :employer do |f| %>
+
+    <div class="field" style="margin: 10px">
+        <%= f.label :employer %>
+        <%= f.text_field :employer, :required => true %>
+    </div>
+
+
+    <div class="field" style="margin: 10px">
+        <%= f.label :start_date  %>
+        <%= f.date_field :start_date, :required => true %>
+    </div>
+
+    <div class="field" style="margin: 10px">
+        <%= f.label :end_date %>
+        <%= f.date_field :end_date, :required => true %>
+    </div>
+
+    <div class="field" style="margin: 10px">
+        <%= f.submit :Save %>
+    </div>
+
+
+<% end %>
+
+

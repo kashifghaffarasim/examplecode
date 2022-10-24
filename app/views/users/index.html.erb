@@ -1,0 +1,41 @@
+
+
+
+<%= form_for :user do |f| %>
+
+  <div class="field" style="margin: 10px">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, :required => true %>
+  </div>
+
+
+  <div class="field" style="margin: 10px">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, :required => true %>
+  </div>
+
+    <div class="field" style="margin: 10px">
+        <%= f.label :nick_name %>
+        <%= f.text_field :nick_name %>
+    </div>
+
+    <div class="field" style="margin: 10px">
+        <%= f.label :email %>
+        <%= f.text_field :email, :required => true %>
+    </div>
+
+    <div class="field" style="margin: 10px">
+        <%= f.label :phone_number %>
+        <%= f.text_field :phone_number, :required => true %>
+    </div>
+
+
+    <div class="field" style="margin: 10px">
+        <%= f.submit :Save %>
+    </div>
+
+
+<% end %>
+
+
+
