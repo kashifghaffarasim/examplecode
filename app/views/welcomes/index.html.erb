@@ -1,27 +1,42 @@
 
 
 
-<div class="row" style="text-align: center;">
-    <div class="col-md-6" style="margin: 50px 0">
-        <a href="/users" style="  border: 1px solid #ddd;
-                            padding: 16px;
-                            text-decoration: none;
-                            background: #ddd;
-                            color: #000;
-                            border-radius: 5px;">
-            Personal Data
-        </a>
+
+<div class="container">
+    
+    <div class="row text-center mt-5" >
+        <div class="col-md-6">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Personal Data
+            </button>
+        </div>
+
+        <div class="col-md-6">
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#employeeModal">
+                Employment
+            </button>
+        </div>
     </div>
 
-    <div class="col-md-6">
-        <a href="" style="  border: 1px solid #ddd;
-                            padding: 16px;
-                            text-decoration: none;
-                            background: #ddd;
-                            color: #000;
-                            border-radius: 5px;">
-            Employment
-        </a>
-    </div>
+    <%= render "user"%>
+    <%= render "employee"%>
+
 </div>
 
+
+
+<div class="row text-center mt-5">
+
+    <div data-controller="hello">
+          <input data-hello-target="name" class="form-controler" type="text" style="height: 20px; width: 200px; border: 1px solid #ddd">
+
+          <button data-action="click->hello#greet">
+            Greet
+          </button>
+
+          <span data-hello-target="output">
+          </span>
+    </div>
+
+</div>    

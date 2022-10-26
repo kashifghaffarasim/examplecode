@@ -7,9 +7,9 @@ class EmployersController < ApplicationController
     def create 
         @employer = Employment.new(employer_params)
         if @employer.save 
-            redirect_to root_url 
+           
         else
-            render :index
+          
         end
     end 
 

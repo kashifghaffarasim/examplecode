@@ -1,0 +1,48 @@
+<!-- Trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="employeeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+
+
+<%= form_with modal: Employment, data: { controller: "input-validation", action: "turbo:submit-end->from#validate" } do |f| %>
+
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Employment Data From </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      
+
+
+    <div class="field" style="margin: 10px">
+        <%= f.label :employer %>
+        <%= f.text_field :employer, :required => true %>
+    </div>
+
+
+    <div class="field" style="margin: 10px">
+        <%= f.label :start_date  %>
+        <%= f.date_field :start_date, :required => true %>
+    </div>
+
+    <div class="field" style="margin: 10px">
+        <%= f.label :end_date %>
+        <%= f.date_field :end_date, :required => true %>
+    </div>
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" >Save changes</button>
+      </div>
+    </div>
+
+    <% end %>
+
+  </div>
+</div>
